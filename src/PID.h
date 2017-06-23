@@ -9,13 +9,15 @@ public:
   double p_error;
   double i_error;
   double d_error;
+  double total_error;
 
   /*
   * Coefficients
   */ 
-  double Kp;
-  double Ki;
-  double Kd;
+  double Kp_;
+  double Ki_;
+  double Kd_;
+  double initial_throttle;
 
   /*
   * Constructor
@@ -41,6 +43,8 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
+
+  double Throttle();
 };
 
 #endif /* PID_H */
