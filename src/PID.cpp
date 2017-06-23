@@ -42,7 +42,7 @@ double PID::Throttle() {
         return 0.8;
     }
     // if straight road and the cte is less use a higher throttle angle
-    if (-total_error> -0.05 && -total_error< 0.05 && -total_error> -0.3 && -total_error< 0.3) {
+    if (-total_error> -0.05 && -total_error< 0.05 && p_error > -0.3 && p_error< 0.3) {
         return 0.7;
     }
     // else use a lower throttle angle
